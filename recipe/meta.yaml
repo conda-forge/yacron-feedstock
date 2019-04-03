@@ -1,6 +1,6 @@
 {% set name = "yacron" %}
-{% set version = "0.8.1" %}
-{% set sha256 = "cec72d0ab23aa61e3c46abd52397c890985115381d66688af56f4b57f5b71ba8" %}
+{% set version = "0.9.0" %}
+{% set sha256 = "f54e02a1a37a06a8f972258095547c75f6e34404365b9985639a54a59acf133b" %}
 
 package:
   name: {{ name|lower }}
