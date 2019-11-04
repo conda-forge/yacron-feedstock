@@ -1,6 +1,6 @@
 {% set name = "yacron" %}
-{% set version = "0.9.0" %}
-{% set sha256 = "f54e02a1a37a06a8f972258095547c75f6e34404365b9985639a54a59acf133b" %}
+{% set version = "0.10.0" %}
+{% set sha256 = "613a5900e4f7a0d4cda5062b0d95016545f79e664c71806e7633ca2d40014bbc" %}
 
 package:
   name: {{ name|lower }}
@@ -14,7 +14,7 @@ source:
 build:
   noarch: python
   number: 0
-  script: python -m pip install --no-deps --ignore-installed .
+  script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
   build:
