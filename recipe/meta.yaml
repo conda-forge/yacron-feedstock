@@ -1,23 +1,23 @@
 {% set name = "yacron" %}
 {% set version = "0.10.0" %}
-{% set sha256 = "613a5900e4f7a0d4cda5062b0d95016545f79e664c71806e7633ca2d40014bbc" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  fn: {{ name }}-{{ version }}.tar.gz
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: {{ sha256 }}
+  sha256: 613a5900e4f7a0d4cda5062b0d95016545f79e664c71806e7633ca2d40014bbc
 
 build:
   noarch: python
+  script: "{{ PYTHON }} -m pip install . -vv"
   number: 0
-  script: {{ PYTHON }} -m pip install . --no-deps -vv
+  entry_points:
+    - yacron = yacron.__main__:main
 
 requirements:
-  build:
+  host:
     - python >=3.5
     - pip
     - pytest-runner
@@ -34,13 +34,16 @@ requirements:
 test:
   imports:
     - yacron
+  commands:
+    - yacron --version
 
 about:
   home: https://github.com/gjcarneiro/yacron
-  summary: 'A modern Cron replacement that is Docker-friendly'
   license: MIT
   license_family: MIT
   license_file: LICENSE
+  summary: 'A modern Cron replacement that is Docker-friendly'
+  dev_url: https://github.com/gjcarneiro/yacron
 
 extra:
   recipe-maintainers:
