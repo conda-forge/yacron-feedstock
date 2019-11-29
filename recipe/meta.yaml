@@ -11,8 +11,8 @@ source:
 
 build:
   noarch: python
+  number: 1
   script: "{{ PYTHON }} -m pip install . -vv"
-  number: 0
   entry_points:
     - yacron = yacron.__main__:main
 
