@@ -1,5 +1,5 @@
 {% set name = "yacron" %}
-{% set version = "0.10.0" %}
+{% set version = "0.10.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 613a5900e4f7a0d4cda5062b0d95016545f79e664c71806e7633ca2d40014bbc
+  sha256: a846556fee4a2f3281df0c09915fa262443f0614f38089097dd35584c1ed5114
 
 build:
   noarch: python
-  number: 1
-  script: "{{ PYTHON }} -m pip install . -vv"
+  number: 0
+  script: {{ PYTHON }} -m pip install . -vv
   entry_points:
     - yacron = yacron.__main__:main
 
@@ -42,7 +42,7 @@ about:
   license: MIT
   license_family: MIT
   license_file: LICENSE
-  summary: 'A modern Cron replacement that is Docker-friendly'
+  summary: A modern Cron replacement that is Docker-friendly
   dev_url: https://github.com/gjcarneiro/yacron
 
 extra:
