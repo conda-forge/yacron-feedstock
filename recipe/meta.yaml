@@ -1,5 +1,5 @@
 {% set name = "yacron" %}
-{% set version = "0.10.1" %}
+{% set version = "0.11.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: a846556fee4a2f3281df0c09915fa262443f0614f38089097dd35584c1ed5114
+  sha256: 0a904959c3360c8ff4ee4ad0acd9102bf10f2dba530ebe80bbbed2b949a04a44
 
 build:
   noarch: python
