@@ -5,11 +5,11 @@ Home: https://github.com/gjcarneiro/yacron
 
 Package license: MIT
 
-Feedstock license: BSD-3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/yacron-feedstock/blob/master/LICENSE.txt)
 
 Summary: A modern Cron replacement that is Docker-friendly
 
-
+Development: https://github.com/gjcarneiro/yacron
 
 Current build status
 ====================
